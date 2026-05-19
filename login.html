@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+  <script> 
+    function redirectToDashboard(event) { 
+      event.preventDefault();
+      window.location.href = 'dashboard.html';
+    } 
+  </script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 to-pink-300">
+  <div class="bg-white p-16 rounded-lg shadow-lg w-3/12  text-center">
+    <h1 class="text-5xl font-bold mb-10">LOGIN</h1>
+    <form onsubmit="redirectToDashboard(event)">
+      <div class="mb-8">
+        <input type="text" id="user_id" placeholder="Username" class="input input-bordered w-full h-14 text-xl">
+      </div>
+      <div class="mb-8">
+        <input type="password" id="password" placeholder="Password" class="input input-bordered w-full h-14 text-xl">
+      </div>
+      <button type="submit" class="btn btn-primary w-full h-14 text-xl ">LOGIN</button>
+      <div class="mt-8">
+        <a href="#" class="link link-primary text-xl">Forgot Password?</a>
+      </div>
+      <div class="mt-6 text-xl">
+        Don't have an account? <a href="#" class="link link-primary">Sign up</a>
+      </div>
+    </form>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
